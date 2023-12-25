@@ -1,20 +1,18 @@
+main {
+  height: 400vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  width: 200px;
+  height: 200px; 
+  border: 2px solid white;
 }
 
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: cadetblue;
-  padding: 1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:hover {
-    cursor: pointer;
-  }
+.nine {
+  margin-left: 200vw;
 }
+
