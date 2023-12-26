@@ -1,28 +1,30 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+import React from 'react'
 import './App.css'
 
 function App() {
   
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.utils.toArray(".panel").forEach((panel, i) => {
+  gsap.utils.toArray(".panel").forEach((child, i) => {
     ScrollTrigger.create({
-      trigger: panel as Element,
-      start: "top center",
-      end: "bottom center",
+      trigger: child as Element,
+      start: "top top",
       pin: true,
-      pinSpacing: false
+      pinSpacing: false,
     });
   });
+
 
   return (
       <>
         <main>
-          <section className="panel gray"><p>Hi</p></section>
-          <section className="panel orange"><p>Hi</p></section>
-          <section className="panel purple"><p>Hi</p></section>
-          <section className="panel green"><p>Hi</p></section>
+          <div className="panel gray"><p>ONE</p></div>
+          <div className="panel orange"><p>TWO</p></div>
+          <div className="panel purple"><p>THREE</p></div>
+          <div className="panel green"><p>FOUR</p></div>
         </main>
       </>
     )
